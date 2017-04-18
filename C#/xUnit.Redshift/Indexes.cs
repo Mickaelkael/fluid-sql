@@ -6,10 +6,9 @@
 // </copyright>
 
 using TTRider.FluidSql;
-using xUnit.Redshift;
 using Xunit;
 
-namespace xUnit.Postgres
+namespace xUnit.Redshift
 {
     public class Indexes : RedshiftSqlProviderTests
     {
@@ -24,6 +23,7 @@ namespace xUnit.Postgres
             var text = Provider.GenerateStatement((CreateIndexStatement)statement);
 
             Assert.Equal("", text);
+
             //Assert.NotNull(text);
             //Assert.Equal("CREATE INDEX \"if\" ON \"foo\".\"bar\" ( \"col1\" ASC, \"col2\" DESC );", text);
 
@@ -40,6 +40,7 @@ namespace xUnit.Postgres
             var text = Provider.GenerateStatement(statement);
 
             Assert.Equal("", text);
+
             //Assert.NotNull(text);
             //Assert.Equal("DROP INDEX IF EXISTS \"if\";\r\nCREATE INDEX \"if\" ON \"foo\".\"bar\" ( \"col1\" ASC, \"col2\" DESC );", text);
 
@@ -94,6 +95,7 @@ namespace xUnit.Postgres
 
             //Assert.NotNull(text);
             //Assert.Equal("DROP INDEX \"tbl1\".\"index1\";", text);
+
         }
 
         [Fact]
@@ -107,6 +109,7 @@ namespace xUnit.Postgres
 
             //Assert.NotNull(text);
             //Assert.Equal("DROP INDEX IF EXISTS \"foo\".\"if\";", text);
+
         }
 
     }

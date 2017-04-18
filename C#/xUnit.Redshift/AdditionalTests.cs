@@ -8,9 +8,9 @@
 using TTRider.FluidSql;
 using Xunit;
 
-namespace xUnit.Postgres
+namespace xUnit.Redshift
 {
-    public class AdditionalTests : PostgreSqlProviderTests
+    public class AdditionalTests : RedshiftSqlProviderTests
     {
         [Fact]
         public void DeclareStatement()

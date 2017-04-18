@@ -8,9 +8,9 @@
 using TTRider.FluidSql;
 using Xunit;
 
-namespace xUnit.Postgres
+namespace xUnit.Redshift
 {
-    public class Merge : PostgreSqlProviderTests
+    public class Merge : RedshiftSqlProviderTests
     {
         [Fact]
         public void MergeWhenMatchUpdate()
@@ -67,8 +67,7 @@ namespace xUnit.Postgres
         }
 
         //TODO: MERGE Statement
-        /*
-        [Fact]
+        /*[Fact]
         public void MergeTopWhenMatchDelete()
         {
             var statement = Sql.Merge
